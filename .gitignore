@@ -1,0 +1,32 @@
+#####################
+# Ignore IDE Files.
+*.ipr
+*.iws
+*.iml
+.idea/
+eclipse/
+.nb-gradle/
+.nb-gradle-properties
+.classpath
+.project
+bin
+Schematic_to_Java*
+schematics/
+#####################
+
+#####################
+# Ignore Build Files
+build/
+dist/
+out/
+run/
+bin/
+# Ignore Gradle Stuff
+gradle.properties
+.gradle/
+#####################
+
+#####################
+# Ignore Git
+.git/
+#####################
