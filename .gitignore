@@ -22,7 +22,7 @@ out/
 run/
 bin/
 # Ignore Gradle Stuff
-gradle.properties
+# gradle.properties
 .gradle/
 #####################
 

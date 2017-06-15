@@ -39,6 +39,10 @@ public class exadventures
             modRecipes.addTConstructRecipes(); // Adds Modded Tinkers Construct Recipes
         }
 
+        if(config.modThermalTConstructRecipes){
+            modRecipes.addTconstructThermalRecipes(); // Adds Modded Thermal Foundation to Tinkers Construct Recipes
+        }
+
     }
 
 }

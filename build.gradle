@@ -25,7 +25,7 @@ compileJava {
 
 minecraft {
 
-    version = "1.10.2-12.18.3.2202"
+    version = "${minecraft_version}-12.18.3.2202"
     runDir = "run"
 
     // the mappings can be changed at any time, and must be in the following format.
@@ -50,17 +50,24 @@ repositories {
         name 'forge'
         url 'http://files.minecraftforge.net/maven'
     }
+
+    maven { // CurseForge
+        url "https://minecraft.curseforge.com/api/maven/"
+    }
 }
 
 dependencies {
 
-    deobfCompile "slimeknights.mantle:Mantle:1.10.2-1.1.4.+:deobf"
-    deobfCompile "slimeknights:TConstruct:1.10.2-2.6.+:deobf"
+    deobfCompile "slimeknights.mantle:Mantle:${minecraft_version}-1.1.4.+:deobf"
+    deobfCompile "slimeknights:TConstruct:${minecraft_version}-2.6.+:deobf"
 
 //    compile "slimeknights.mantle:Mantle:1.10.2-1.1.4.+"
 //    compile "slimeknights:TConstruct:1.10.2-2.6.+"
 
-    deobfCompile "mezz.jei:jei_1.10.2:3.+"
+    deobfCompile "mezz.jei:jei_${minecraft_version}:3.+"
+
+    deobfCompile "thermal-foundation:ThermalFoundation-${minecraft_version}:${tf_version}:universal"
+    deobfCompile "cofhcore:CoFHCore-${minecraft_version}:${cofhcore_version}:universal"
 
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -94,6 +101,7 @@ processResources
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
+        include '**/*.properties'
                 
         // replace version and mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
@@ -102,6 +110,7 @@ processResources
     // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
+        exclude '**/*.properties'
     }
 }
 
