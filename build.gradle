@@ -8,6 +8,7 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'maven'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
 
@@ -25,7 +26,7 @@ compileJava {
 
 minecraft {
 
-    version = "${minecraft_version}-12.18.3.2202"
+    version = "${minecraft_version}-12.18.3.2316"
     runDir = "run"
 
     // the mappings can be changed at any time, and must be in the following format.
