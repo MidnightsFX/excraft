@@ -17,6 +17,7 @@ schematics/
 #####################
 # Ignore Build Files
 build/
+libs/
 dist/
 out/
 run/

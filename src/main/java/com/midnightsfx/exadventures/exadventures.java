@@ -2,6 +2,7 @@ package com.midnightsfx.exadventures;
 
 import com.midnightsfx.exadventures.init.genericRecipes;
 import com.midnightsfx.exadventures.init.modRecipes;
+import com.midnightsfx.exadventures.item.ItemRegistar;
 import com.midnightsfx.exadventures.util.exConfig;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -23,8 +24,8 @@ public class exadventures
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
 
-
-        config = new exConfig(e.getSuggestedConfigurationFile());
+        ItemRegistar.callRegistry(e); //Register items
+        config = new exConfig(e.getSuggestedConfigurationFile()); // Create/intake config
 
     }
 
@@ -41,6 +42,10 @@ public class exadventures
 
         if(config.modThermalTConstructRecipes){
             modRecipes.addTconstructThermalRecipes(); // Adds Modded Thermal Foundation to Tinkers Construct Recipes
+        }
+
+        if(config.addEclair){
+            genericRecipes.addEclair();
         }
 
     }

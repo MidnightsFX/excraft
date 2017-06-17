@@ -49,7 +49,6 @@ public class modRecipes {
         }
 
         public static void addTconstructThermalRecipes() {
-
             ///////// Melt Bronze /////////
             // Armor
             TinkerRegistry.registerMelting(TFEquipment.ArmorSet.BRONZE.armorBoots, TinkerFluids.bronze, Material.VALUE_Ingot * 2);

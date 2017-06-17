@@ -27,6 +27,7 @@ public class exConfig {
     public boolean genericRecipes;
     public boolean modTConstructRecipes;
     public boolean modThermalTConstructRecipes;
+    public boolean addEclair;
 
     public exConfig(File configFile) {
         config = new Configuration(configFile);
@@ -50,6 +51,7 @@ public class exConfig {
     private void loadConfig() {
         //region Addon
         genericRecipes = config.getBoolean("enableGenericRecipes", ADDON, true, "Enable generic Minecraft addon recipes. Default: true");
+        addEclair = config.getBoolean("addRecipes", ADDON, true, "Add custom food recipe eclair. Default: true");
         modTConstructRecipes = config.getBoolean("enableTConstructRecipes", ADDON, true, "Enable Tinkers Construct recipes. Default: true");
         modThermalTConstructRecipes = config.getBoolean("enableThermalTConstructRecipes", ADDON, true, "Enable Thermal Foundation Tinkers Construct recipes. Default: true");
         if (config.hasChanged()) {

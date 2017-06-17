@@ -1,7 +1,9 @@
 package com.midnightsfx.exadventures.init;
 
+import com.midnightsfx.exadventures.item.ItemRegistar;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -10,7 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class genericRecipes {
 
-
+    public static Item eclair;
 
 
     public static void addRecipes() {
@@ -32,4 +34,7 @@ public class genericRecipes {
     }
 
 
+    public static void addEclair() {
+        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistar.ECLAIR ), Items.WHEAT, Items.SUGAR, Items.EGG, Items.MILK_BUCKET, Items.WHEAT, Items.WATER_BUCKET);
+    }
 }
