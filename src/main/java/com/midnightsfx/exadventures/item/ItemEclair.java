@@ -3,8 +3,10 @@ package com.midnightsfx.exadventures.item;
 import com.midnightsfx.exadventures.exadventures;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
@@ -15,8 +17,6 @@ public class ItemEclair extends ItemFood {
 
     private String name;
     public String texture;
-    private PotionEffect potionid1;
-    private PotionEffect potionid2;
     private float potionEffectProbability;
 
 
@@ -25,7 +25,12 @@ public class ItemEclair extends ItemFood {
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
         this.setRegistryName("eclair");
-        this.setUnlocalizedName(exadventures.MODID + "." + this.getRegistryName().getResourcePath());
+        //this.setRegistryName(exadventures.MODID + ".eclair");
+        //this.setUnlocalizedName(exadventures.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setUnlocalizedName("eclair" + this.getRegistryName().getResourcePath());
+        //this.getRegistryName().getResourcePath();
+        this.maxStackSize = 16;
+
         //this.setUnlocalizedName(unlocalizedName);
         //this.setTextureName(exadventures.MODID + ":" + unlocalizedName);
         //this.effects = effects;
@@ -36,8 +41,8 @@ public class ItemEclair extends ItemFood {
         super.onFoodEaten(stack, world, player);
 
         if (!world.isRemote) {
-            player.addPotionEffect(new PotionEffect(this.potionid1));
-            player.addPotionEffect(new PotionEffect(this.potionid2));
+            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 3000, 1));
+            player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 3000, 1));
         }
     }
 

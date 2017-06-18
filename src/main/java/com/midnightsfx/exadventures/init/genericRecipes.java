@@ -18,7 +18,6 @@ public class genericRecipes {
     public static void addRecipes() {
         // Smelting
         GameRegistry.addSmelting(Item.getItemById(367), new ItemStack(Items.LEATHER, 1), 0.1F);
-
         // Shapeless
         GameRegistry.addShapelessRecipe(new ItemStack(Items.CLAY_BALL,2 ), Items.WHEAT, Blocks.DIRT, Items.WATER_BUCKET);
 
