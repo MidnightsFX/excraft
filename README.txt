@@ -1,17 +1,17 @@
 Standalone source installation
 ==============================
 
-Windows: "gradlew setupDecompWorkspace"
-Linux/Mac OS: "./gradlew setupDecompWorkspace"
+Windows: "gradle setupDecompWorkspace"
+Linux/Mac OS: "gradle setupDecompWorkspace"
 
-For eclipse, run "gradlew eclipse" (./gradlew eclipse if you are on Mac/Linux)
+For eclipse, run "gradle eclipse"
 switch your workspace to /eclipse/
 OR
 Open IDEA, and import project.
 Select your build.gradle file and have it import.
-"gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
+"gradle genIntellijRuns"
 Restart Intellij
 
-If at any point you are missing libraries in your IDE run "gradlew --refresh-dependencies" to refresh the local cache.
+If at any point you are missing libraries in your IDE run "gradle --refresh-dependencies" to refresh the local cache.
 When adding or updating dependencies also run "setupDevWorkspace"
 
