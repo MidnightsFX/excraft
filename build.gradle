@@ -20,9 +20,9 @@ apply plugin: 'maven'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
 
-version = "${build_feature_version}.${build_fix_version}"
-group= "com.midnightsfx.exadventures" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "exadventures"
+version = "${minecraft_version}-${build_feature_version}.${build_fix_version}"
+group= "com.midnightsfx.exacompat" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "exacompat"
 
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
 compileJava {
@@ -72,8 +72,8 @@ dependencies {
     deobfCompile "slimeknights:TConstruct:${minecraft_version}-2.6.+:deobf"
 
     // JEI - because recipes
-    deobfCompile "mezz.jei:jei_${minecraft_version}:3.+"
-    //provided "mezz.jei:jei_${minecraft_version}:3.+"
+    //deobfCompile "mezz.jei:jei_${minecraft_version}:3.+"
+    deobfProvided "mezz.jei:jei_${minecraft_version}:3.+"
 
     // Thermal Foundation and COFH
     deobfCompile "thermal-foundation:ThermalFoundation-${minecraft_version}:${tf_version}:universal"
