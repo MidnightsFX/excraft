@@ -15,8 +15,8 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = exacompat.MODID, name = exacompat.MODNAME, version = exacompat.VERSION, dependencies = "required-after:Forge", useMetadata = true)
 public class exacompat {
 
-    public static final String MODID = "exadventures";
-    public static final String MODNAME = "Excellent Adventures Mod";
+    public static final String MODID = "exacompat";
+    public static final String MODNAME = "Excellent Adventures Compatability Layer";
     public static final String VERSION = "0.1.1";
 
     // I kid, not proxying yet, just laying it down.

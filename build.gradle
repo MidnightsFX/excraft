@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
         maven {
             name = "Forge Gradle"
             url = "http://files.minecraftforge.net/maven"

@@ -22,12 +22,10 @@ public class commonProxy {
         //config = new Configuration(new File(directory.getPath(), "excompat.cfg"));
         config = new commonConfig(e.getSuggestedConfigurationFile()); // Create/intake config
         //Config.readConfig();
-
-        recipeController.initRecipes(); // Initialize configured recipes based on existing mods
     }
 
     public void init(FMLInitializationEvent e) {
-
+        recipeController.initRecipes(); // Initialize configured recipes based on existing mods
     }
 
     public void postInit(FMLPostInitializationEvent e) {

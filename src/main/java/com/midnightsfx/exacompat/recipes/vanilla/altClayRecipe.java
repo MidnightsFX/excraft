@@ -10,6 +10,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class altClayRecipe {
     public static void addAltClay(){
-        GameRegistry.addShapelessRecipe(new ItemStack(Items.CLAY_BALL,2 ), Items.WHEAT, Blocks.DIRT, Items.WATER_BUCKET);
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.CLAY_BALL,2 ),
+                new ItemStack(Items.WHEAT, 1),
+                new ItemStack(Blocks.DIRT, 1),
+                new ItemStack(Items.WATER_BUCKET, 1));
     }
 }
