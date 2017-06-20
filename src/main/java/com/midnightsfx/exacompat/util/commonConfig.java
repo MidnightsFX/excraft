@@ -36,12 +36,12 @@ public class commonConfig {
 
     private void loadConfig() {
         //region TinkersConstructRecipes
-        vanillaTconSmelt = config.getBoolean("enableVanillaTconMeltdown", TCON, true, "Enables Melting down of VANILLA armor, weapons and tools. Default: true");
-        thermalTconSmelt = config.getBoolean("enableThermalTconMeltdown", TCON, true, "Enables Melting down of THERMAL FOUNDATION armor, weapons and tools. Default: true");
+        vanillaTconSmelt = config.getBoolean("enableVanillaTconMeltdown", TCON, true, "Enables Melting down of VANILLA armor, weapons and tools.");
+        thermalTconSmelt = config.getBoolean("enableThermalTconMeltdown", TCON, true, "Enables Melting down of THERMAL FOUNDATION armor, weapons and tools.");
 
         //region AltVanillaRecipes
-        vanillaAltClay = config.getBoolean("enableAltClay", VANILLA, true, "Enable a simple recipe to make clay from dirt, wheat and water. Default: true");
-        vanillaFleshToLeather = config.getBoolean("enableFleshToLeather", VANILLA, true, "Enable smelting Rotten Flesh to leather. Default: true");
+        vanillaAltClay = config.getBoolean("enableAltClay", VANILLA, true, "Enable a simple recipe to make clay from dirt, wheat and water.");
+        vanillaFleshToLeather = config.getBoolean("enableFleshToLeather", VANILLA, true, "Enable smelting Rotten Flesh to leather.");
 
 
         if (config.hasChanged()) {

@@ -1,0 +1,9 @@
+# Items
+item.eclair.name=Eclair
+
+# Cotton Crop stuffs
+item.cotton.name=Cotton
+item.cottonSeed.name=Cotton Seed
+
+# Blocks
+tile.oreDark.name=Dark Ore
