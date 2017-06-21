@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cross"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/0"
+        }
+      },
+      "2": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/1"
+        }
+      },
+      "3": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/1"
+        }
+      },
+      "4": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/2"
+        }
+      },
+      "5": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/2"
+        }
+      },
+      "6": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/2"
+        }
+      },
+      "7": {
+        "textures": {
+          "cross": "exacompat:blocks/cotton/3"
+        }
+      }
+    }
+  }
+}
