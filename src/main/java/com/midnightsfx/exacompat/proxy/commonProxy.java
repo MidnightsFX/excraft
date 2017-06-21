@@ -2,7 +2,7 @@ package com.midnightsfx.exacompat.proxy;
 
 import com.midnightsfx.exacompat.blocks.blockRegister;
 import com.midnightsfx.exacompat.items.itemRegister;
-import com.midnightsfx.exacompat.recipes.recipeController;
+import com.midnightsfx.exacompat.recipes.recipeRegister;
 import com.midnightsfx.exacompat.util.commonConfig;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,11 +23,9 @@ public class commonProxy implements proxyInterface {
         //Config.readConfig();
         blockRegister.init();
         itemRegister.init();
-        recipeController.initRecipes(); // Initialize configured recipes based on existing mods
     }
 
     public void init(FMLInitializationEvent e) {
-        recipeController.initRecipes(); // Initialize configured recipes based on existing mods
     }
 
     public void postInit(FMLPostInitializationEvent e) {

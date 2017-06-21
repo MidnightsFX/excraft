@@ -1,4 +1,4 @@
-package com.midnightsfx.exacompat.items;
+package com.midnightsfx.exacompat.items.helpers;
 
 /**
  * Created by MidnightsFX on 6/20/17.

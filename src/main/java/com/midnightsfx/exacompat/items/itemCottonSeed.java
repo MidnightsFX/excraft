@@ -10,11 +10,11 @@ import net.minecraft.item.ItemSeeds;
 /**
  * Created by MidnightsFX on 6/20/17.
  */
-public class cottonSeed extends ItemSeeds implements itemModelRegister {
+public class itemCottonSeed extends ItemSeeds implements itemModelRegister {
 
     private String name = "cottonSeed";
 
-    public cottonSeed() {
+    public itemCottonSeed() {
         super(blockRegister.cropCotton, Blocks.FARMLAND);
         setUnlocalizedName(name);
         setRegistryName(name);

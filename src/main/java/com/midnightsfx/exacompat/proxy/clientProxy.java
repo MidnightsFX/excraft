@@ -22,7 +22,7 @@ public class clientProxy extends commonProxy {
 //        //config = new Configuration(new File(directory.getPath(), "excompat.cfg"));
 //        config = new commonConfig(e.getSuggestedConfigurationFile()); // Create/intake config
 //        //Config.readConfig();
-//        recipeController.initRecipes(); // Initialize configured recipes based on existing mods
+//        recipeRegister.init(); // Initialize configured recipes based on existing mods
 //
 //    }
 

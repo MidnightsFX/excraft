@@ -17,12 +17,15 @@ public class commonConfig {
     //region Categories
     private static final String TCON = "TConstructRecipes";
     private static final String VANILLA = "AltVanillaRecipes";
+    private static final String EXA = "EXARecipes";
 
     //region Recipes - Config Values
     public boolean vanillaTconSmelt;
     public boolean thermalTconSmelt;
     public boolean vanillaAltClay;
     public boolean vanillaFleshToLeather;
+    public boolean exaCottonString;
+    public boolean exaCottonWool;
 
     public commonConfig(File configFile) {
         config = new Configuration(configFile);
@@ -43,6 +46,9 @@ public class commonConfig {
         vanillaAltClay = config.getBoolean("enableAltClay", VANILLA, true, "Enable a simple recipe to make clay from dirt, wheat and water.");
         vanillaFleshToLeather = config.getBoolean("enableFleshToLeather", VANILLA, true, "Enable smelting Rotten Flesh to leather.");
 
+        //region EXARecipes
+        exaCottonString = config.getBoolean("enableCottonToString", EXA, true, "Enable making string from cotton.");
+        exaCottonWool = config.getBoolean("enableCottonToWool", EXA, true, "Enable making wool from cotton.");
 
         if (config.hasChanged()) {
             config.save();
