@@ -3,7 +3,6 @@ package com.midnightsfx.exacompat.blocks.helpers;
 import com.midnightsfx.exacompat.exacompat;
 import com.midnightsfx.exacompat.items.helpers.itemOreDictInterface;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
@@ -22,11 +21,11 @@ public class blockOreHelper extends blockBaseHelper implements itemOreDictInterf
         setResistance(5f);
     }
 
-    @Override
-    public blockOreHelper setCreativeTab(CreativeTabs tab) {
-        super.setCreativeTab(tab);
-        return this;
-    }
+//    @Override
+//    public blockOreHelper setCreativeTab(CreativeTabs tab) {
+//        super.setCreativeTab(tab);
+//        return this;
+//    }
 
     @Override
     public void initOreDict() {

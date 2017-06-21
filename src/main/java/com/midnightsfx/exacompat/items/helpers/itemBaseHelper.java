@@ -23,6 +23,7 @@ public class itemBaseHelper extends Item implements itemModelRegister {
     @Override
     public itemBaseHelper setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
+        super.setCreativeTab(exacompat.creativeTab); // Always display in the mods tab
         return this;
     }
 

@@ -27,7 +27,7 @@ public class blockBaseHelper extends Block implements itemModelRegister {
     @Override
     public blockBaseHelper setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
-        setCreativeTab(exacompat.creativeTab); // Always display in the mods tab
+        super.setCreativeTab(exacompat.creativeTab); // Always display in the mods tab
         return this;
     }
 
