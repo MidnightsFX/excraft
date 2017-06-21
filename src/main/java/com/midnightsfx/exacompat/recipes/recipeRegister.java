@@ -18,7 +18,7 @@ public class recipeRegister {
 
     public static void init(){
 
-        // Load the recipes to smelt down vanillia metal armors, tools and weapons
+        // Load the recipes to smelt down vanilla metal armors, tools and weapons
         if(commonProxy.config.vanillaTconSmelt && isTConstructInstalled){
             smelteryThermalFoundation.addTconstructRecipes();
         }

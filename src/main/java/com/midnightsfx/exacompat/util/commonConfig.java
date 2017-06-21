@@ -17,7 +17,8 @@ public class commonConfig {
     //region Categories
     private static final String TCON = "TConstructRecipes";
     private static final String VANILLA = "AltVanillaRecipes";
-    private static final String EXA = "EXARecipes";
+    private static final String EXARecipe = "EXARecipes";
+    private static final String EXAGen = "EXAWorldgen";
 
     //region Recipes - Config Values
     public boolean vanillaTconSmelt;
@@ -26,6 +27,7 @@ public class commonConfig {
     public boolean vanillaFleshToLeather;
     public boolean exaCottonString;
     public boolean exaCottonWool;
+    public boolean exaDarkOreGen;
 
     public commonConfig(File configFile) {
         config = new Configuration(configFile);
@@ -44,11 +46,13 @@ public class commonConfig {
 
         //region AltVanillaRecipes
         vanillaAltClay = config.getBoolean("enableAltClay", VANILLA, true, "Enable a simple recipe to make clay from dirt, wheat and water.");
-        vanillaFleshToLeather = config.getBoolean("enableFleshToLeather", VANILLA, true, "Enable smelting Rotten Flesh to leather.");
+        vanillaFleshToLeather = config.getBoolean("enableFleshToLeather", VANILLA, false, "Enable smelting Rotten Flesh to leather.");
 
         //region EXARecipes
-        exaCottonString = config.getBoolean("enableCottonToString", EXA, true, "Enable making string from cotton.");
-        exaCottonWool = config.getBoolean("enableCottonToWool", EXA, true, "Enable making wool from cotton.");
+        exaCottonString = config.getBoolean("enableCottonToString", EXARecipe, true, "Enable making string from cotton.");
+        exaCottonWool = config.getBoolean("enableCottonToWool", EXARecipe, true, "Enable making wool from cotton.");
+        //region EXAWorldgen
+        exaDarkOreGen = config.getBoolean("enableDarkOreGen", EXAGen, false, "Enable Dark Ore Generation.");
 
         if (config.hasChanged()) {
             config.save();

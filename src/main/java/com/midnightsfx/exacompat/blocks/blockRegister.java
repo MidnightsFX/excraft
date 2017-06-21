@@ -16,7 +16,7 @@ public class blockRegister {
     public static blockCropCotton cropCotton;
 
     public static void init() {
-        //oreDark = register(new blockOreHelper("oreDark", "oreDark")); //Dark ore is not used yet
+        oreDark = register(new blockOreHelper("oreDark", "oreDark")); //Dark ore is not used yet
         cropCotton = register(new blockCropCotton(), null);
     }
 

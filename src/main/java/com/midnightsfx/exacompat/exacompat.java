@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * Created by MidnightsFX on 6/18/2017.
  */
 
-@Mod(modid = exacompat.MODID, name = exacompat.MODNAME, version = exacompat.VERSION, dependencies = "required-after:Forge", useMetadata = true)
+@Mod(modid = exacompat.MODID, name = exacompat.MODNAME, version = exacompat.VERSION, dependencies = "required-after:Forge", acceptedMinecraftVersions = "1.10.2", useMetadata = true)
 public class exacompat {
 
     public static final String MODID = "exacompat";
