@@ -71,18 +71,26 @@ dependencies {
     deobfCompile "slimeknights:TConstruct:${minecraft_version}-2.6.+:deobf"
 
     // JEI - because recipes
-    //deobfCompile "mezz.jei:jei_${minecraft_version}:3.+"
-    deobfProvided "mezz.jei:jei_${minecraft_version}:3.+"
+    deobfCompile "mezz.jei:jei_${minecraft_version}:3.+"
+    //deobfProvided "mezz.jei:jei_${minecraft_version}:3.+"
 
-    // Thermal Foundation and COFH
+    // Thermal Foundation and COFH - Curseforge
     deobfCompile "thermal-foundation:ThermalFoundation-${minecraft_version}:${tf_version}:universal"
     deobfCompile "cofhcore:CoFHCore-${minecraft_version}:${cofhcore_version}:universal"
 
     // Railcraft
     // deobfCompile "railcraft:Railcraft-${minecraft_version}:MC-1.10.2"
 
-    // Immersive Engineering
-    //deobfCompile "immersive-engineering:ImmersiveEngineering:0.10-60"
+    // Immersive Engineering - Curseforge
+    deobfCompile "immersive-engineering:ImmersiveEngineering:0.10:${immersive_engineering_build}"
+
+    // Botania - Curseforge
+    deobfCompile "botania:Botania r1.9:${botania_build}"
+    deobfCompile "baubles:Baubles:${minecraft_version}:${baubles_build}"
+
+    // PSI - Curseforge
+    deobfCompile "psi:Psi:r1.0:${psi_build}"
+    deobfCompile "autoreglib:AutoRegLib:1.0:2"
 
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -106,6 +114,8 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
 }
+
+// Not sourcing anything locally
 //dependencies {
 //    compile files(
 //            'ImmersiveEngineering-0.10-60.jar'
