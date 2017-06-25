@@ -18,16 +18,41 @@ public class commonConfig {
     private static final String TCON = "TConstructRecipes";
     private static final String VANILLA = "AltVanillaRecipes";
     private static final String EXARecipe = "EXARecipes";
-    private static final String EXAGen = "EXAWorldgen";
+    private static final String EXANV = "EXANetherVanillaWorldGen";
+    private static final String EXANT = "EXANetherThermalWorldGen";
 
     //region Recipes - Config Values
+    // Tcon smelting Configs
     public boolean vanillaTconSmelt;
     public boolean thermalTconSmelt;
+    // Alt vanilla recipe configs
     public boolean vanillaAltClay;
     public boolean vanillaFleshToLeather;
+    // Cotton Recipe configs
     public boolean exaCottonString;
     public boolean exaCottonWool;
-    public boolean exaDarkOreGen;
+    // Vanilla Nether Ores configs
+    public boolean exaNetherVanillaOres;
+    public boolean exaNetherVanillaOreGen;
+    public int exaNetherVanillaOreGenAmount;
+    public int exaNetherVanillaClustersCoal;
+    public int exaNetherVanillaClustersIron;
+    public int exaNetherVanillaClustersGold;
+    public int exaNetherVanillaClustersLapis;
+    public int exaNetherVanillaClustersRedstone;
+    public int exaNetherVanillaClustersDiamond;
+    public int exaNetherVanillaClustersEmerald;
+    // Thermal Expansion Nether ores configs
+    public boolean exaNetherThermalOres;
+    public boolean exaNetherThermalOreGen;
+    public int exaNetherThermalOreGenAmount;
+    public int exaNetherThermalClustersCopper;
+    public int exaNetherThermalClustersNickel;
+    public int exaNetherThermalClustersTin;
+    public int exaNetherThermalClustersSilver;
+    public int exaNetherThermalClustersLead;
+
+
 
     public commonConfig(File configFile) {
         config = new Configuration(configFile);
@@ -51,8 +76,30 @@ public class commonConfig {
         //region EXARecipes
         exaCottonString = config.getBoolean("enableCottonToString", EXARecipe, true, "Enable making string from cotton.");
         exaCottonWool = config.getBoolean("enableCottonToWool", EXARecipe, true, "Enable making wool from cotton.");
+        exaNetherVanillaOres = config.getBoolean("enableNetherVanillaOres", EXARecipe, true, "Enable recipes for Vanilla Nether ores.");
+        exaNetherThermalOres = config.getBoolean("enableNetherThermalOres", EXARecipe, true, "Enables Recipes for Thermal Foundation Nether ores.");
+
         //region EXAWorldgen
-        exaDarkOreGen = config.getBoolean("enableDarkOreGen", EXAGen, false, "Enable Dark Ore Generation.");
+        // Vanilla Nether Worldgen
+        exaNetherVanillaOreGen = config.getBoolean("enableNetherVanillaOres", EXANV, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
+        exaNetherVanillaOreGenAmount = config.getInt("vanillaNetherVeinsize", EXANV,5,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
+        exaNetherVanillaClustersCoal = config.getInt("ClustersCoal", EXANV,5,1,20,"The number of clusters of coal that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersIron = config.getInt("ClustersIron", EXANV,5,1,20,"The number of clusters of Iron that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersGold = config.getInt("ClustersGold", EXANV,3,1,20,"The number of clusters of Gold that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersLapis = config.getInt("ClustersLapis", EXANV,3,1,20,"The number of clusters of Lapis that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersRedstone = config.getInt("ClustersRedstone", EXANV,5,1,20,"The number of clusters of Redstone that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersDiamond = config.getInt("ClustersDiamond", EXANV,2,1,20,"The number of clusters of Diamond that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersEmerald = config.getInt("ClustersEmerald", EXANV,2,1,20,"The number of clusters of Emerald that will attempt to be generated in a chunk.");
+
+        // Thermal Expansion Nether Worldgen
+        exaNetherThermalOreGen = config.getBoolean("enableNetherThermalOres", EXANT, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
+        exaNetherThermalOreGenAmount = config.getInt("thermalNetherVeinsize", EXANT,4,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
+        exaNetherThermalClustersCopper = config.getInt("ClustersCopper", EXANV,5,1,20,"The number of clusters of Copper that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersNickel = config.getInt("ClustersNickel", EXANV,3,1,20,"The number of clusters of Nickel that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersTin = config.getInt("ClustersTin", EXANV,3,1,20,"The number of clusters of Tin that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersSilver = config.getInt("ClustersSilver", EXANV,2,1,20,"The number of clusters of Silver that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersLead = config.getInt("ClustersLead", EXANV,2,1,20,"The number of clusters of Lead that will attempt to be generated in a chunk.");
+
 
         if (config.hasChanged()) {
             config.save();

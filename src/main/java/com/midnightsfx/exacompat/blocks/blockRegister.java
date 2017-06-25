@@ -12,11 +12,42 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class blockRegister {
 
-    public static blockOreHelper oreDark;
+    // Vanilla Nether Ores
+    public static blockOreHelper oreNetherCoal;
+    public static blockOreHelper oreNetherIron;
+    public static blockOreHelper oreNetherGold;
+    public static blockOreHelper oreNetherLapis;
+    public static blockOreHelper oreNetherRedstone;
+    public static blockOreHelper oreNetherDiamond;
+    public static blockOreHelper oreNetherEmerald;
+
+    // Thermal Expansion Nether Ores
+    public static blockOreHelper oreNetherCopper;
+    public static blockOreHelper oreNetherTin;
+    public static blockOreHelper oreNetherSilver;
+    public static blockOreHelper oreNetherLead;
+    public static blockOreHelper oreNetherNickel;
+
     public static blockCropCotton cropCotton;
 
     public static void init() {
-        oreDark = register(new blockOreHelper("oreDark", "oreDark")); //Dark ore is not used yet
+        // Register Vanilla Nether Ores
+        oreNetherCoal = register(new blockOreHelper("oreNetherCoal", "oreNetherCoal"));
+        oreNetherIron = register(new blockOreHelper("oreNetherIron", "oreNetherIron"));
+        oreNetherGold = register(new blockOreHelper("oreNetherGold", "oreNetherGold"));
+        oreNetherLapis = register(new blockOreHelper("oreNetherLapis", "oreNetherLapis"));
+        oreNetherRedstone = register(new blockOreHelper("oreNetherRedstone", "oreNetherRedstone"));
+        oreNetherDiamond = register(new blockOreHelper("oreNetherDiamond", "oreNetherDiamond"));
+        oreNetherEmerald = register(new blockOreHelper("oreNetherEmerald", "oreNetherEmerald"));
+
+        //Register Thermal Foundation Nether Ores
+        oreNetherCopper = register(new blockOreHelper("oreNetherCopper", "oreNetherCopper"));
+        oreNetherTin = register(new blockOreHelper("oreNetherTin", "oreNetherTin"));
+        oreNetherSilver = register(new blockOreHelper("oreNetherSilver", "oreNetherSilver"));
+        oreNetherLead = register(new blockOreHelper("oreNetherLead", "oreNetherLead"));
+        oreNetherNickel = register(new blockOreHelper("oreNetherNickel", "oreNetherNickel"));
+
+        // Register Cotton
         cropCotton = register(new blockCropCotton(), null);
     }
 

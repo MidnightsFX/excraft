@@ -1,9 +1,38 @@
+itemGroup.exacompat.creativeTab=Excellent Adventures Compatibility
+itemGroup.exacompat=Excellent Adventures Compatibility
+#############################################
 # Items
+#############################################
+
 item.eclair.name=Eclair
 
-# Cotton Crop stuffs
+#############################################
+# Cotton
+#############################################
+
 item.cotton.name=Cotton
 item.cottonSeed.name=Cotton Seed
 
-# Blocks
-tile.oreDark.name=Dark Ore
+item.ingotCopper.name=Nether Copper
+item.ingotLead.name=Nether Lead
+item.ingotNickel.name=Nether Nickel
+item.ingotSilver.name=Nether Silver
+item.ingotTin.name=Nether Tin
+
+#############################################
+# Ores
+#############################################
+
+tile.oreNetherCoal.name=Nether Coal
+tile.oreNetherDiamond.name=Nether Diamond
+tile.oreNetherEmerald.name=Nether Emerald
+tile.oreNetherGold.name=Nether Gold
+tile.oreNetherIron.name=Nether Iron
+tile.oreNetherLapis.name=Nether Lapis
+tile.oreNetherRedstone.name=Nether Redstone
+
+tile.oreNetherNickel.name=Nether Nickel
+tile.oreNetherCopper.name=Nether Copper
+tile.oreNetherTin.name=Nether Tin
+tile.oreNetherLead.name=Nether Lead
+tile.oreNetherSilver.name=Nether Silver

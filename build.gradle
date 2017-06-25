@@ -85,8 +85,8 @@ dependencies {
     deobfCompile "immersive-engineering:ImmersiveEngineering:0.10:${immersive_engineering_build}"
 
     // Botania - Curseforge
-    deobfCompile "botania:Botania r1.9:${botania_build}"
-    deobfCompile "baubles:Baubles:${minecraft_version}:${baubles_build}"
+    //deobfCompile "botania:Botania r1.9:${botania_build}"
+    //deobfCompile "baubles:Baubles:${minecraft_version}:${baubles_build}"
 
     // PSI - Curseforge
     deobfCompile "psi:Psi:r1.0:${psi_build}"

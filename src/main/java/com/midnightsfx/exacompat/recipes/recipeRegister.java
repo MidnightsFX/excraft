@@ -2,6 +2,7 @@ package com.midnightsfx.exacompat.recipes;
 
 import com.midnightsfx.exacompat.proxy.commonProxy;
 import com.midnightsfx.exacompat.recipes.exa.cottonRecipes;
+import com.midnightsfx.exacompat.recipes.exa.oreNetherRecipes;
 import com.midnightsfx.exacompat.recipes.tinkers.smelteryThermalFoundation;
 import com.midnightsfx.exacompat.recipes.vanilla.altClayRecipe;
 import com.midnightsfx.exacompat.recipes.vanilla.fleshToLeatherRecipe;
@@ -36,6 +37,12 @@ public class recipeRegister {
         if(commonProxy.config.exaCottonString){cottonRecipes.addToString();}
         // EXA Cotton to wool
         if(commonProxy.config.exaCottonString){cottonRecipes.addToWool();}
+
+        // EXA Nether Vanilla ore recipes
+        if(commonProxy.config.exaNetherVanillaOres){oreNetherRecipes.addVanillaNetherOres();}
+        // EXA Nether Thermal Foundation ores
+        if(commonProxy.config.exaNetherThermalOres){oreNetherRecipes.addThermalExpansionNetherOres();}
+
     }
 
 }
