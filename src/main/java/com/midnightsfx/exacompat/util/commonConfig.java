@@ -83,7 +83,7 @@ public class commonConfig {
         // Vanilla Nether Worldgen
         exaNetherVanillaOreGen = config.getBoolean("enableNetherVanillaOres", EXANV, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
         exaNetherVanillaOreGenAmount = config.getInt("vanillaNetherVeinsize", EXANV,5,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
-        exaNetherVanillaClustersCoal = config.getInt("ClustersCoal", EXANV,5,1,20,"The number of clusters of coal that will attempt to be generated in a chunk.");
+        exaNetherVanillaClustersCoal = config.getInt("ClustersCoal", EXANV,100,1,100,"The number of clusters of coal that will attempt to be generated in a chunk.");
         exaNetherVanillaClustersIron = config.getInt("ClustersIron", EXANV,5,1,20,"The number of clusters of Iron that will attempt to be generated in a chunk.");
         exaNetherVanillaClustersGold = config.getInt("ClustersGold", EXANV,3,1,20,"The number of clusters of Gold that will attempt to be generated in a chunk.");
         exaNetherVanillaClustersLapis = config.getInt("ClustersLapis", EXANV,3,1,20,"The number of clusters of Lapis that will attempt to be generated in a chunk.");
