@@ -36,7 +36,6 @@ public class worldgenRegister implements IWorldGenerator {
 
         // Enable/Disable worldgen for Nether Vanilla in configs
         if(commonProxy.config.exaNetherVanillaOreGen){
-            System.out.println("Nether Vanilla Ore Generation");
             // Gen ore, inWorld, RandomSeed, PosXtoGen(Chunksize * 16), PosZtoGen(Chunksize * 16), MinY, MaxY, oreClusterSize, TimesXChunk
             genOreHelper.generateOre(blockRegister.oreNetherCoal.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 126, commonProxy.config.exaNetherVanillaOreGenAmount + random.nextInt(4), commonProxy.config.exaNetherVanillaClustersCoal);
             genOreHelper.generateOre(blockRegister.oreNetherIron.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 126, commonProxy.config.exaNetherVanillaOreGenAmount + random.nextInt(4), commonProxy.config.exaNetherVanillaClustersIron);
@@ -48,7 +47,6 @@ public class worldgenRegister implements IWorldGenerator {
         }
         // Enable/Disable worldgen for Nether Thermal in configs
         if(commonProxy.config.exaNetherThermalOreGen){
-            System.out.println("Nether Thermal Ore Generation");
             genOreHelper.generateOre(blockRegister.oreNetherCopper.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 126, commonProxy.config.exaNetherThermalOreGenAmount + random.nextInt(4), commonProxy.config.exaNetherThermalClustersCopper);
             genOreHelper.generateOre(blockRegister.oreNetherLead.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 126, commonProxy.config.exaNetherThermalOreGenAmount + random.nextInt(4), commonProxy.config.exaNetherThermalClustersLead);
             genOreHelper.generateOre(blockRegister.oreNetherSilver.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 126, commonProxy.config.exaNetherThermalOreGenAmount + random.nextInt(4), commonProxy.config.exaNetherThermalClustersSilver);
