@@ -16,6 +16,7 @@ public class recipeRegister {
 
     public static boolean isTConstructInstalled = Loader.isModLoaded("tinkersconstruct");
     public static boolean isThermalFoundation = Loader.isModLoaded("thermalfoundation");
+    public static boolean isImmersiveEngineering = Loader.isModLoaded("immersiveengineering");
 
     public static void init(){
 
@@ -39,9 +40,21 @@ public class recipeRegister {
         if(commonProxy.config.exaCottonString){cottonRecipes.addToWool();}
 
         // EXA Nether Vanilla ore recipes
-        if(commonProxy.config.exaNetherVanillaOres){oreNetherRecipes.addVanillaNetherOres();}
+        if(commonProxy.config.exaNetherVanillaOres){
+            oreNetherRecipes.addVanillaNetherOres();
+            // Add Vanilla melting for the smeltery
+            if(isTConstructInstalled){oreNetherRecipes.addVanillaNetherOresTinkersSmelt();}
+            // Add IE crusher recipe for Vanilla ores
+            if(isImmersiveEngineering){oreNetherRecipes.addVanillaNetherOresIECrusher();}
+        }
         // EXA Nether Thermal Foundation ores
-        if(commonProxy.config.exaNetherThermalOres){oreNetherRecipes.addThermalExpansionNetherOres();}
+        if(commonProxy.config.exaNetherThermalOres){
+            oreNetherRecipes.addThermalExpansionNetherOres();
+            // Add TF melting for the smeltery
+            if(isTConstructInstalled){oreNetherRecipes.addTENetherOresTinkersSmelt();}
+            // Add IE crusher recipe for TF ores
+            if(isImmersiveEngineering){oreNetherRecipes.addTENetherOresIECrusher();}
+        }
 
     }
 
