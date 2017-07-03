@@ -28,7 +28,8 @@ public class oreNetherRecipes {
     public static void addVanillaNetherOresTinkersSmelt(){
         TinkerRegistry.registerMelting(blockRegister.oreNetherIron, TinkerFluids.iron, Material.VALUE_Ingot * 4);
         TinkerRegistry.registerMelting(blockRegister.oreNetherGold, TinkerFluids.gold, Material.VALUE_Ingot * 4);
-        TinkerRegistry.registerMelting(blockRegister.oreNetherEmerald, TinkerFluids.emerald, Material.VALUE_Ingot * 4);
+        // TODO implement Emerald Smelting - seems to be different than other metals
+        //TinkerRegistry.registerMelting(blockRegister.oreNetherEmerald, TinkerFluids.emerald,Material.VALUE_Gem * 6);
     }
 
     public static void addVanillaNetherOresIECrusher(){
