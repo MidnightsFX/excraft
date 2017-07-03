@@ -31,6 +31,7 @@ public class commonConfig {
     // Cotton Recipe configs
     public boolean exaCottonString;
     public boolean exaCottonWool;
+    public int exaCottonSeedDrop;
     // Vanilla Nether Ores configs
     public boolean exaNetherVanillaOres;
     public boolean exaNetherVanillaOreGen;
@@ -76,10 +77,11 @@ public class commonConfig {
         //region EXARecipes
         exaCottonString = config.getBoolean("enableCottonToString", EXARecipe, true, "Enable making string from cotton.");
         exaCottonWool = config.getBoolean("enableCottonToWool", EXARecipe, true, "Enable making wool from cotton.");
-        exaNetherVanillaOres = config.getBoolean("enableNetherVanillaOres", EXARecipe, true, "Enable recipes for Vanilla Nether ores.");
-        exaNetherThermalOres = config.getBoolean("enableNetherThermalOres", EXARecipe, true, "Enables Recipes for Thermal Foundation Nether ores.");
+        exaCottonSeedDrop = config.getInt("cottonSeedDropRate", EXARecipe, 3, 0, 5, "Drop rate for cotton Seeds. set to zero to disable.");
 
         //region EXAWorldgen
+        exaNetherVanillaOres = config.getBoolean("enableNetherVanillaOres", EXANV, true, "Enable recipes for Vanilla Nether ores.");
+        exaNetherThermalOres = config.getBoolean("enableNetherThermalOres", EXANV, true, "Enables Recipes for Thermal Foundation Nether ores.");
         // Vanilla Nether Worldgen
         exaNetherVanillaOreGen = config.getBoolean("enableNetherVanillaOres", EXANV, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
         exaNetherVanillaOreGenAmount = config.getInt("vanillaNetherVeinsize", EXANV,5,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
@@ -90,7 +92,6 @@ public class commonConfig {
         exaNetherVanillaClustersRedstone = config.getInt("ClustersRedstone", EXANV,5,1,20,"The number of clusters of Redstone that will attempt to be generated in a chunk.");
         exaNetherVanillaClustersDiamond = config.getInt("ClustersDiamond", EXANV,2,1,20,"The number of clusters of Diamond that will attempt to be generated in a chunk.");
         exaNetherVanillaClustersEmerald = config.getInt("ClustersEmerald", EXANV,2,1,20,"The number of clusters of Emerald that will attempt to be generated in a chunk.");
-
         // Thermal Expansion Nether Worldgen
         exaNetherThermalOreGen = config.getBoolean("enableNetherThermalOres", EXANT, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
         exaNetherThermalOreGenAmount = config.getInt("thermalNetherVeinsize", EXANT,4,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
