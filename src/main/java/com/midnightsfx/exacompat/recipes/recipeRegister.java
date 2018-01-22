@@ -16,6 +16,7 @@ public class recipeRegister {
 
     public static boolean isTConstructInstalled = Loader.isModLoaded("tinkersconstruct");
     public static boolean isThermalFoundation = Loader.isModLoaded("thermalfoundation");
+    public static boolean isImmersiveEngineering = Loader.isModLoaded("immersiveengineering");
 
     public static void init(){
         // Load the recipes to smelt down vanilla metal armors, tools and weapons
@@ -38,10 +39,21 @@ public class recipeRegister {
         if(exacompat.config.exaCottonWool){cottonRecipes.addToWool();}
 
         // EXA Nether Vanilla ore recipes
-        if(exacompat.config.exaNetherVanillaOres){oreNetherRecipes.addVanillaNetherOres();}
+        if(exacompat.config.exaNetherVanillaOres){
+            oreNetherRecipes.addVanillaNetherOres();
+            // Add Vanilla melting for the smeltery
+            if(isTConstructInstalled){oreNetherRecipes.addVanillaNetherOresTinkersSmelt();}
+            // Add IE crusher recipe for Vanilla ores
+            if(isImmersiveEngineering){oreNetherRecipes.addVanillaNetherOresIECrusher();}
+        }
         // EXA Nether Thermal Foundation ores
-        if(exacompat.config.exaNetherThermalOres){oreNetherRecipes.addThermalExpansionNetherOres();}
-
+        if(exacompat.config.exaNetherThermalOres){
+            oreNetherRecipes.addThermalExpansionNetherOres();
+            // Add TF melting for the smeltery
+            if(isTConstructInstalled){oreNetherRecipes.addTENetherOresTinkersSmelt();}
+            // Add IE crusher recipe for TF ores
+            if(isImmersiveEngineering){oreNetherRecipes.addTENetherOresIECrusher();}
+        }
     }
 
 }
