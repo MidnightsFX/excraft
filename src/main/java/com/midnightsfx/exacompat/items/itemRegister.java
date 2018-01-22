@@ -1,9 +1,9 @@
 package com.midnightsfx.exacompat.items;
 
 
+import com.midnightsfx.exacompat.exacompat;
 import com.midnightsfx.exacompat.items.helpers.itemOreDictInterface;
 import com.midnightsfx.exacompat.items.helpers.itemOreHelper;
-import com.midnightsfx.exacompat.proxy.commonProxy;
 import com.midnightsfx.exacompat.util.itemModelRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -38,8 +38,8 @@ public class itemRegister {
         // Register Cotton
         cotton = register(new itemOreHelper("cotton", "cotton"));
         cottonseed = register(new itemCottonSeed());
-        if(commonProxy.config.exaCottonSeedDrop > 0){ // Add cotton to grass drop, if its not set to a zero rate
-            MinecraftForge.addGrassSeed(new ItemStack(itemRegister.cottonseed), commonProxy.config.exaCottonSeedDrop);
+        if(exacompat.config.exaCottonSeedDrop > 0){ // Add cotton to grass drop, if its not set to a zero rate
+            MinecraftForge.addGrassSeed(new ItemStack(itemRegister.cottonseed), exacompat.config.exaCottonSeedDrop);
         }
         eclair = register(new itemEclair());
     }

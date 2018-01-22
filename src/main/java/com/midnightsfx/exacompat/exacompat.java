@@ -2,6 +2,7 @@ package com.midnightsfx.exacompat;
 
 import com.midnightsfx.exacompat.proxy.commonProxy;
 import com.midnightsfx.exacompat.recipes.recipeRegister;
+import com.midnightsfx.exacompat.util.commonConfig;
 import com.midnightsfx.exacompat.util.creativeTabEXA;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -29,16 +30,20 @@ public class exacompat {
 
     //public static Logger logger;
 
+    // Config
+    public static commonConfig config; // Config instance
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         //logger = event.getModLog();
+        config = new commonConfig(e.getSuggestedConfigurationFile()); // Create/intake config
         proxy.preInit(e);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
-        recipeRegister.init(); // Initialize recipes, regardless of client or server
         proxy.init(e);
+        recipeRegister.init(); // Initialize recipes, regardless of client or server
     }
 
     @Mod.EventHandler

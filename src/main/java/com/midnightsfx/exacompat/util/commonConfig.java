@@ -95,11 +95,11 @@ public class commonConfig {
         // Thermal Expansion Nether Worldgen
         exaNetherThermalOreGen = config.getBoolean("enableNetherThermalOres", EXANT, true, "Enable Generating Vanilla (re-textured) Ores in the Nether.");
         exaNetherThermalOreGenAmount = config.getInt("thermalNetherVeinsize", EXANT,4,1,20,"Amount of ores per cluster multiplier. (veinsize * this value).");
-        exaNetherThermalClustersCopper = config.getInt("ClustersCopper", EXANV,5,1,20,"The number of clusters of Copper that will attempt to be generated in a chunk.");
-        exaNetherThermalClustersNickel = config.getInt("ClustersNickel", EXANV,3,1,20,"The number of clusters of Nickel that will attempt to be generated in a chunk.");
-        exaNetherThermalClustersTin = config.getInt("ClustersTin", EXANV,3,1,20,"The number of clusters of Tin that will attempt to be generated in a chunk.");
-        exaNetherThermalClustersSilver = config.getInt("ClustersSilver", EXANV,2,1,20,"The number of clusters of Silver that will attempt to be generated in a chunk.");
-        exaNetherThermalClustersLead = config.getInt("ClustersLead", EXANV,2,1,20,"The number of clusters of Lead that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersCopper = config.getInt("ClustersCopper", EXANT,5,1,20,"The number of clusters of Copper that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersNickel = config.getInt("ClustersNickel", EXANT,3,1,20,"The number of clusters of Nickel that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersTin = config.getInt("ClustersTin", EXANT,3,1,20,"The number of clusters of Tin that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersSilver = config.getInt("ClustersSilver", EXANT,2,1,20,"The number of clusters of Silver that will attempt to be generated in a chunk.");
+        exaNetherThermalClustersLead = config.getInt("ClustersLead", EXANT,2,1,20,"The number of clusters of Lead that will attempt to be generated in a chunk.");
 
 
         if (config.hasChanged()) {

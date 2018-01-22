@@ -11,10 +11,10 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class cottonRecipes {
     public static void addToString(){
-        GameRegistry.addRecipe(new ShapedOreRecipe(Items.STRING, "CC ", 'C', "oreCotton"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.STRING, 2), "CC ", 'C', "cotton"));
     }
 
     public static void addToWool(){
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.WOOL, 1), "CC ", "CC ", 'C', "oreCotton"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.WOOL, 2), "CC ", "CC ", 'C', "cotton"));
     }
 }

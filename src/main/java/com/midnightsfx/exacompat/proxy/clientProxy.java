@@ -14,18 +14,11 @@ public class clientProxy extends commonProxy {
 
     //public static commonConfig config; // Config instance
 
-
-    // Aquire all of the PRE-INIT stuff from the common proxy
-    //@Override
-//    public void preInit(FMLPreInitializationEvent e) {
-//        //File directory = e.getModConfigurationDirectory();
-//        //config = new Configuration(new File(directory.getPath(), "excompat.cfg"));
-//        config = new commonConfig(e.getSuggestedConfigurationFile()); // Create/intake config
-//        //Config.readConfig();
-//        recipeRegister.init(); // Initialize configured recipes based on existing mods
-//
-//    }
-
+    /*@Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        super.preInit();
+    }*/
     @Override
     public void init(FMLInitializationEvent e) {
 
