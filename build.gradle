@@ -84,7 +84,7 @@ dependencies {
     // Immersive Engineering - Curseforge
     deobfCompile "immersive-engineering:ImmersiveEngineering:0.10:${immersive_engineering_build}"
     // Immersive Petroleum - Curseforge
-    deobfCompile "immersive-petroleum:immersivepetroleum:1.10.2:${immersive_petroleum_build}"
+    // deobfCompile "immersive-petroleum:immersivepetroleum:1.10.2:${immersive_petroleum_build}"
 
     // Botania - Curseforge
     //deobfCompile "botania:Botania r1.9:${botania_build}"
